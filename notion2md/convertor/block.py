@@ -102,7 +102,10 @@ class BlockConvertor:
         if "rich_text" in payload:
             info["text"] = richtext_convertor(payload["rich_text"])
         if "icon" in payload:
-            info["icon"] = payload["icon"]["emoji"]
+            if "emoji" in payload["icon"]:
+                info["icon"] = payload["icon"]["emoji"]
+            else:
+                info["icon"] = "📢"
         if "checked" in payload:
             info["checked"] = payload["checked"]
         if "expression" in payload:
