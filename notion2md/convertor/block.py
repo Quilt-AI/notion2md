@@ -3,8 +3,9 @@ import hashlib
 import os
 import urllib.request as request
 from urllib.parse import urlparse,unquote
+from typing import Never
 
-from cleo.io.io import IO
+# from cleo.io.io import IO
 
 from notion2md.config import Config
 from notion2md.console.formatter import error
@@ -12,6 +13,8 @@ from notion2md.console.formatter import status
 from notion2md.console.formatter import success
 from notion2md.notion_api import NotionClient
 from .richtext import richtext_convertor
+
+IO = Never
 
 
 class BlockConvertor:
