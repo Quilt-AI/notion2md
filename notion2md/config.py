@@ -1,7 +1,5 @@
 import os
 
-from notion_client.helpers import get_id
-
 from notion2md.exceptions import MissingTargetIDError
 
 
@@ -26,7 +24,7 @@ class Config(object):
         unzipped: bool = False,
     ):
         if block_url:
-            self.target_id = get_id(block_url)
+            raise NotImplementedError("block_url is not implemented yet")
         elif block_id:
             self.target_id = block_id
         else:

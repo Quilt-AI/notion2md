@@ -11,10 +11,11 @@ from notion2md.config import Config
 from notion2md.console.formatter import error
 from notion2md.console.formatter import status
 from notion2md.console.formatter import success
-from notion2md.notion_api import NotionClient
+#from notion2md.notion_api import NotionClient
 from .richtext import richtext_convertor
 
 IO = Never
+NotionClient = Never
 
 
 class BlockConvertor:
